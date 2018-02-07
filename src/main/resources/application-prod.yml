@@ -1,0 +1,10 @@
+welcome.message: I am lucky from PROD
+
+logging:
+  level:
+      org.springframework: ERROR
+ 
+basic:
+  message : lucky
+  success : true
+  id  : 1
