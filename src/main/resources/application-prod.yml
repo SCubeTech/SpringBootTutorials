@@ -2,7 +2,7 @@ welcome.message: I am lucky from PROD
 
 logging:
   level:
-      org.springframework: ERROR
+      org.springframework: DEBUG
  
 basic:
   message : lucky
