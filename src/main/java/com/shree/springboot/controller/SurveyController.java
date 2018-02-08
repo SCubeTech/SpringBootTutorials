@@ -21,17 +21,17 @@ public class SurveyController {
 	@Autowired
 	SurveyService service;
 	
-	@GetMapping(value="/surveys/{surveyId}/questions",produces="application/xml")
+	@GetMapping(value="/surveys/{surveyId}/questions",produces="application/json")
 	public List<Question> retreiveQuestion(@PathVariable String surveyId){
 		return service.retreiveQuestions(surveyId); 
 	}
 	
-	@GetMapping(value="/surveys/{surveyId}/questions/{questionId}",produces="application/xml")
+	@GetMapping(value="/surveys/{surveyId}/questions/{questionId}",produces="application/json")
 	public Question retreiveQuestion(@PathVariable String surveyId,@PathVariable String questionId){
 		return service.retreiveQuestion(surveyId, questionId);
 	}
-	
-	@PostMapping(value="/surveys/{surveyId}/questions",produces="application/xml")
+
+	@PostMapping(value="/surveys/{surveyId}/questions",produces="application/json")
 	public ResponseEntity<?> addQuestion(@PathVariable String surveyId,@RequestBody Question questionId){
 		Question question = service.addQuestion(surveyId, questionId);
 			if(question==null) {
