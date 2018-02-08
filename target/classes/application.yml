@@ -1,5 +1,0 @@
-welcome.message : Welcome message from property file I am lucky from normal
-logging:
-  level:
-      org.springframework: ERROR
-      
